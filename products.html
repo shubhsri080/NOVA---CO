@@ -1,96 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | NOVA & CO.</title>
+    <meta name="theme-color" content="#17231f">
+    <title>Shop Collection | NOVA & CO.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header>
-        <h2>NOVA & CO.</h2>
-
-        <nav>
+<body class="products-page">
+    <header class="shop-header">
+        <a class="brand" href="index.html" aria-label="NOVA and CO home"><span class="brand-mark">N</span><span>NOVA <i>&</i> CO.</span></a>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
+            <a href="products.html" aria-current="page">Shop</a>
             <a href="gallery.html">Gallery</a>
             <a href="offers.html">Offers</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <a class="header-note" href="#collection">NEW SEASON <span>↘</span></a>
     </header>
 
-    <main>
-        <section class="welcome">
-            <h1>Our Products</h1>
-            <p>Explore Our Clothing Collection</p>
+    <main class="shop-main">
+        <section class="shop-hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> THE EVERYDAY EDIT · 2026</p>
+                <h1 id="hero-title">Wear your<br><em>own kind</em> of<br>confidence.</h1>
+                <p class="hero-subtitle">Easy pieces. Better days. Find the feel-good fits made for wherever life takes you.</p>
+                <a class="hero-link" href="#collection">EXPLORE THE COLLECTION <span>↓</span></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <span class="hero-orbit orbit-one"></span>
+                <span class="hero-orbit orbit-two"></span>
+                <span class="hero-sticker">MADE<br>TO MOVE</span>
+                <span class="hero-garment">✳</span>
+                <span class="hero-side-note">NOVA / STUDIO 01</span>
+            </div>
+            <div class="hero-index"><span>01</span><span>—</span><span>04</span></div>
         </section>
 
-        <section class="intro">
-            <h2>Available Products</h2>
-            <p>
-                We offer different types of clothing
-                for everyday use.
-            </p>
+        <section class="collection-section" id="collection" aria-labelledby="collection-title">
+            <div class="collection-heading">
+                <div>
+                    <p class="eyebrow dark-eyebrow">THOUGHTFULLY PICKED FOR YOU</p>
+                    <h2 id="collection-title">The collection<span>.</span></h2>
+                </div>
+                <p class="collection-intro">Four everyday favourites.<br>One fresh way to show up.</p>
+            </div>
+
+            <div class="collection-tools">
+                <label class="search-box">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <span class="visually-hidden">Search products</span>
+                    <input id="product-search" type="search" placeholder="Find your next favourite" autocomplete="off">
+                    <kbd>/</kbd>
+                </label>
+                <label class="sort-box"><span>SORT</span>
+                    <select id="price-sort" aria-label="Sort products by price">
+                        <option value="default">Featured</option>
+                        <option value="low">Price: low to high</option>
+                        <option value="high">Price: high to low</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="category-chips" role="group" aria-label="Filter products by category">
+                <button class="category-chip is-active" type="button" data-category="all" aria-pressed="true">Everything <span>04</span></button>
+                <button class="category-chip" type="button" data-category="t-shirt" aria-pressed="false">Tees</button>
+                <button class="category-chip" type="button" data-category="jeans" aria-pressed="false">Denim</button>
+                <button class="category-chip" type="button" data-category="shirt" aria-pressed="false">Shirts</button>
+                <button class="category-chip" type="button" data-category="jacket" aria-pressed="false">Layers</button>
+                <p id="product-count" aria-live="polite">Showing all 4 pieces</p>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <article class="product-card" data-category="t-shirt" data-price="799">
+                    <div class="product-art art-coral" aria-hidden="true">
+                        <span class="art-caption">NOVA / 001</span><span class="art-shape shape-disc"></span><span class="garment-icon">👕</span><span class="art-index">01</span>
+                    </div>
+                    <div class="product-meta"><span class="product-category">THE DAILY TEE</span><span class="product-code">NO. 101</span></div>
+                    <div class="product-title-row"><h3>Classic T-Shirt</h3><span class="product-price">₹799</span></div>
+                    <p class="product-description">Your soft, easy, goes-with-everything favourite.</p>
+                </article>
+
+                <article class="product-card" data-category="jeans" data-price="1499">
+                    <div class="product-art art-blue" aria-hidden="true">
+                        <span class="art-caption">NOVA / 002</span><span class="art-shape shape-stripe"></span><span class="garment-icon">👖</span><span class="art-index">02</span>
+                    </div>
+                    <div class="product-meta"><span class="product-category">THE ALL-DAY DENIM</span><span class="product-code">NO. 102</span></div>
+                    <div class="product-title-row"><h3>Blue Jeans</h3><span class="product-price">₹1,499</span></div>
+                    <p class="product-description">A relaxed classic, ready for wherever.</p>
+                </article>
+
+                <article class="product-card" data-category="shirt" data-price="1199">
+                    <div class="product-art art-lime" aria-hidden="true">
+                        <span class="art-caption">NOVA / 003</span><span class="art-shape shape-blob"></span><span class="garment-icon">👔</span><span class="art-index">03</span>
+                    </div>
+                    <div class="product-meta"><span class="product-category">THE EASY SHIRT</span><span class="product-code">NO. 103</span></div>
+                    <div class="product-title-row"><h3>Casual Shirt</h3><span class="product-price">₹1,199</span></div>
+                    <p class="product-description">A little polished. A lot comfortable.</p>
+                </article>
+
+                <article class="product-card" data-category="jacket" data-price="1999">
+                    <div class="product-art art-lilac" aria-hidden="true">
+                        <span class="art-caption">NOVA / 004</span><span class="art-shape shape-ring"></span><span class="garment-icon">🧥</span><span class="art-index">04</span>
+                    </div>
+                    <div class="product-meta"><span class="product-category">THE LIGHT LAYER</span><span class="product-code">NO. 104</span></div>
+                    <div class="product-title-row"><h3>Winter Jacket</h3><span class="product-price">₹1,999</span></div>
+                    <p class="product-description">Cosy comfort for cool days and late plans.</p>
+                </article>
+            </div>
+
+            <div id="empty-state" class="empty-state" hidden>
+                <span>✳</span><h3>No pieces found</h3><p>Try another search or choose a different category.</p>
+                <button id="reset-filters" type="button">RESET FILTERS ↗</button>
+            </div>
         </section>
 
-        <section class="product-list">
-            <h2>Product Details</h2>
-
-            <table>
-                <tr>
-                    <th>Product ID</th>
-                    <th>Product Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                </tr>
-
-                <tr>
-                    <td>101</td>
-                    <td>Classic T-Shirt</td>
-                    <td>T-Shirt</td>
-                    <td>Rs. 799</td>
-                </tr>
-
-                <tr>
-                    <td>102</td>
-                    <td>Blue Jeans</td>
-                    <td>Jeans</td>
-                    <td>Rs. 1499</td>
-                </tr>
-
-                <tr>
-                    <td>103</td>
-                    <td>Casual Shirt</td>
-                    <td>Shirt</td>
-                    <td>Rs. 1199</td>
-                </tr>
-
-                <tr>
-                    <td>104</td>
-                    <td>Winter Jacket</td>
-                    <td>Jacket</td>
-                    <td>Rs. 1999</td>
-                </tr>
-            </table>
-        </section>
-
-        <section class="categories">
-            <h2>Our Clothing Categories</h2>
-            <ul>
-                <li>T-Shirts</li>
-                <li>Jeans</li>
-                <li>Casual Shirts</li>
-                <li>Jackets</li>
-            </ul>
+        <section class="shop-note" aria-label="Our promise">
+            <span>GOOD CLOTHES.</span><span>GOOD MOOD.</span><span>JUST BE YOU.</span>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 NOVA & CO. | Student Project</p>
-    </footer>
-
+    <footer class="shop-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">N</span><span>NOVA <i>&</i> CO.</span></a><p>Everyday wear, with a little more you in it.</p><span>© 2026 NOVA & CO.</span></footer>
+    <script src="spotlight.js"></script>
+    <script src="products.js"></script>
 </body>
 </html>
